@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>itsprasu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <header class="header">
+      <h1 class="title">⚡FitSync</h1>
+      <p class="subtitle">A simple and sleep BMI Calculator to keep you fit.</p>
+    </header>
+
+    <section class="content" id="app">
+  <div class="layout">
+    <!-- Left Column: Form + Results -->
+    <div class="form-results">
+      <!-- Inputs -->
+      <form class="grid" id="bmi-form" novalidate>
+        <div class="grid two">
+          <div>
+            <label for="units">Units</label>
+            <select id="units" class="select" aria-label="Unit system">
+              <option value="metric">Metric (kg, cm)</option>
+              <option value="imperial">Imperial (lb, in)</option>
+            </select>
+          </div>
+          <div>
+            <label for="age">Age <span class="muted">(optional)</span></label>
+            <input id="age" class="input" type="number" placeholder="e.g., 22" min="1" max="120" />
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div>
+            <label for="height">Height <span id="heightUnitLabel" class="muted">(cm)</span></label>
+            <input id="height" class="input" type="number" placeholder="e.g., 170" required />
+          </div>
+          <div>
+            <label for="weight">Weight <span id="weightUnitLabel" class="muted">(kg)</span></label>
+            <input id="weight" class="input" type="number" placeholder="e.g., 65" required />
+          </div>
+        </div>
+
+        <div class="row" style="grid-template-columns: 1fr auto auto; align-items: end;">
+          <p id="error" class="error" role="alert"></p>
+          <button type="button" class="btn ghost" id="resetBtn">Reset</button>
+          <button type="submit" class="btn" id="calcBtn">Calculate BMI</button>
+        </div>
+      </form>
+
+      <!-- Results -->
+      <section class="panel result">
+        <div style="display:flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+          <div>
+            <div class="muted">Your BMI</div>
+            <div class="bmi-value" id="bmiValue">—</div>
+          </div>
+          <div class="chip" id="bmiCategory">—</div>
+        </div>
+
+        <div class="scale"><div class="marker" id="marker"></div></div>
+
+        <div class="legend">
+          <span><i class="dot c-under"></i> Underweight &lt; 18.5</span>
+          <span><i class="dot c-normal"></i> Normal 18.5–24.9</span>
+          <span><i class="dot c-over"></i> Overweight 25–29.9</span>
+          <span><i class="dot c-obese"></i> Obese ≥ 30</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="illustration">
+      <img src="WhatsApp Image 2025-08-26 at 19.09.09_789014de.jpg" alt="Fitness Illustration">
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">© 2025 Prasurjya Goswami. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
