@@ -18,12 +18,6 @@ A modern Body Mass Index (BMI) Calculator built with HTML, CSS, and JavaScript. 
 
 ♿ Accessible basics: labeled controls and live result region
 
-🖼 Preview
-
-Add a screenshot or GIF to show the app visually:
-
-![FitSync Screenshot](screenshot.png)
-
 🛠 Tech stack
 
 HTML5 — structure
